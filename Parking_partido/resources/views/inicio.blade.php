@@ -20,12 +20,12 @@
 
             <div style="border:1px solid black; margin-bottom:50px;background-color:lightblue; border-radius:1%;height:60px; display:flex;align-items:center">
             <h1 style="width:80%; float:left">Lista Coches</h1>
-            <select name="s1" id="s1" style="width:10%">
-            <option value="">Elige optcion</option>
-            <option value="Anadir"><a href="{{route('Nuevo_coche')}}" >Anadir</a> </option>
-            <option value="Lista" ><a href="{{route('Buscar_coche')}}">Lista</a></option>
-            <option value="Borrar"><a href="{{route('Lista_coches')}}">Borrar</a></option>
-        </select>
+
+            
+            <a  href="{{ route('Nuevo_coche') }}">Añadir</a>&nbsp;&nbsp;
+            <a href="{{ route('Lista_coches') }}">Lista</a>&nbsp;&nbsp;
+            <a  href="{{ route('Buscar_coche') }}">Buscar</a>&nbsp;&nbsp;
+
 
         </div>
 
