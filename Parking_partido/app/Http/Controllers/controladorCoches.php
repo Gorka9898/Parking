@@ -87,9 +87,16 @@ class controladorCoches extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function buscador()
+    public function buscador(Request $request)
     {
-        return view("Buscar_coche");
+        if (request('search')) {
+            $cocheB = Coche::where('matricula', 'like', '%' . request('search') . '%')->get();
+        } else {
+            $cocheB = Coche::all();
+        }
+    
+        return view('Buscar_coche')->with('cocheB', $cocheB);
+        //return view("Buscar_coche");
     }
 
     /**

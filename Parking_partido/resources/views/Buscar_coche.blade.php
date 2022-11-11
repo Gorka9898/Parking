@@ -13,7 +13,20 @@
     <title>Document</title>
 </head>
 <body>
-    
+
+<form method="POST" action="{{route('Buscar_coche')}}">
+{{ csrf_field() }}
+        <input type="search" class="form-control" placeholder="Buscar coche" name="search">
+    </form>
+    <br>
+
+    <ul class="list-group mt-3">
+        @forelse($cocheB as $coche)
+            <li class="list-group-item">{{ $coche->matricula }}</li>
+        @empty
+            <li class="list-group-item list-group-item-danger">Coche no encontrado</li>
+        @endforelse
+    </ul>
 </body>
 </html>
 
