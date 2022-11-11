@@ -39,7 +39,7 @@ class controladorCoches extends Controller
         $coche = Coche::find($id);
         $coche->delete();
 
-        return redirect('/');
+        return redirect('/lista');
         
     }
         public function store(Request $request)
@@ -59,7 +59,7 @@ class controladorCoches extends Controller
         // add other fields
         $coche->save();
                
-            return redirect('/',);
+            return redirect('/crear',);
         }
   
     
@@ -77,7 +77,8 @@ class controladorCoches extends Controller
      */
     public function lista()
     {
-        return view("Lista_coches");
+        $coche=Coche::all();
+        return view("Lista_coches")->with("elCoche", $coche);
     }
 
     /**

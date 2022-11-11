@@ -21,9 +21,10 @@
             <div style="border:1px solid black; margin-bottom:50px;background-color:lightblue; border-radius:1%;height:60px; display:flex;align-items:center">
             <h1 style="width:80%; float:left">Lista Coches</h1>
             <select name="s1" id="s1" style="width:10%">
-            <option value="Anadir"><a href="{{route('Nuevo_coche')}}">Anadir</a> </option><!--Poner links con a dentro del option-->
-            <option value="Lista"><a href="{{route('Buscar_coche')}}">Lista</a></option>
-            <option value="Borrar"><a href="{{route('Lista_coches')}}">Borrar</a></option>
+            <option value="">Elige optcion</option>
+            <option value="Anadir"><a src="{{route('Nuevo_coche')}}" >Anadir</a> </option><!--Poner links con a dentro del option-->
+            <option value="Lista" ><a src="{{route('Buscar_coche')}}">Lista</a></option>
+            <option value="Borrar"><a src="{{route('Lista_coches')}}">Borrar</a></option>
         </select>
 
         </div>

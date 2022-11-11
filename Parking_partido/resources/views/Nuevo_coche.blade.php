@@ -1,7 +1,7 @@
 @extends('inicio')
 
 
-@section('anadir_coche')
+@section('Nuevo_coche')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -60,3 +60,4 @@
     
 </body>
 </html>
+@endsection

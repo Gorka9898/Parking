@@ -29,7 +29,7 @@ Route::delete('/lista/{id}', [controladorCoches::class, 'delete'])->name('borrar
 
 Route::get('/crear', [controladorCoches::class, 'crear_coches_formulario'])->name('Nuevo_coche');
 
-Route::get('/', [controladorCoches::class, 'lista'])->name('Lista_coches');
+Route::get('/lista', [controladorCoches::class, 'lista'])->name('Lista_coches');
 
 Route::get('/buscador', [controladorCoches::class, 'buscador'])->name('Buscar_coche');
 
